@@ -1,0 +1,53 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  padding: 1rem;
+}
+.container{
+  max-width: 25em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+
+
+}
+
+textarea{
+  max-width:25em;
+  min-width: 25em;
+}
+
+form{
+  border: 1px solid black;
+border-radius: 0.3em;
+padding: 0.3em;
+margin: 0.3em;
+  background-color:rgb(216,215,215);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+
+
+}
+form label{
+  display: block;
+}
+
+button{
+  background-color:lightslategray;
+
+}
+input{
+  background-color: lightgrey;
+  display: block;
+}
+
+
+.alert{
+  background-color: red;
+}
+
+.ng-valid{
+  border: 2px solid green;
+}
