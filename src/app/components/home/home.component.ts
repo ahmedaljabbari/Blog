@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticleServiceService } from '../../article-service.service';
+
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  base: boolean = false;
+  article: any = [{}]
 
-  constructor() { }
+  constructor(private ArticleService: ArticleServiceService) { }
 
   ngOnInit(): void {
+    this.article = this.ArticleService.callLatest()
   }
 
 }
