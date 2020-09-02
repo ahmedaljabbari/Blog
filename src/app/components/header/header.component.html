@@ -1,13 +1,13 @@
 <div class="container">
   <ul>
       <li routerLinkActive="is-active" routerLink="/components/home">Home</li>
-      <li routerLinkActive="is-active" routerLink="/components/latest">Latest Articles</li>
-      <li routerLinkActive="is-active" routerLink="/components/all-articles">All</li>
-      <li routerLinkActive="is-active" routerLink="/components/new-article" *ngIf="isAuthenticated">New Article</li>
+      <li routerLinkActive="is-active" routerLink="/latest">Latest Articles</li>
+      <li routerLinkActive="is-active" routerLink="/all-articles">All</li>
+      <li routerLinkActive="is-active" routerLink="/new-article" *ngIf="isAuthenticated">New Article</li>
   </ul>
   <div class="right-container">
       <p class="header-text" *ngIf="!isAuthenticated">Are you a blogger? </p>
-      <button class="btn-login" *ngIf="isAuthenticated" routerLink="/components/home" (click)="log_out()">Log out</button>
-      <button class="btn-login" *ngIf="!isAuthenticated" routerLink="/components/login">Yes, I'm a blogger</button>
+      <button class="btn-login" *ngIf="isAuthenticated" routerLink="/home" (click)="log_out()">Log out</button>
+      <button class="btn-login" *ngIf="!isAuthenticated" routerLink="/login">Yes, I'm a blogger</button>
   </div>
 </div>
