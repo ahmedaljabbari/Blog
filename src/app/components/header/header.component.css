@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  background-color: crimson;
+  width: 100%;
+  justify-content: space-between;
+}
+
+div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+div ul li {
+  display: inline-block;
+  padding: 0.5em;
+  color: white;
+}
+div ul li:hover {
+  background-color: rgb(77, 77, 77);
+  cursor: pointer;
+}
+
+.btn-login {
+  margin-right: 1em;
+ height: 1.5em;
+ align-self: center;
+}
+.is-active {
+  background-color: rgb(77, 77, 77)
+}
+.header-text {
+  display: inline;
+  color: white;
+}
+.right-container {
+ align-self: center;
+}
