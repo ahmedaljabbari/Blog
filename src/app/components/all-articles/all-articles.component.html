@@ -1,1 +1,8 @@
-<p>all-articles works!</p>
+<h2>All articles</h2>
+<h4>Titels only!</h4>
+
+<div class="main-container">
+    <div class="article-container" *ngFor="let titles of titles">
+        <h4 class="title">{{titles.title}}</h4>
+    </div>
+</div>

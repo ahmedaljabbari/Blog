@@ -1,0 +1,24 @@
+h1 {
+  text-align: center;
+}
+.article-container {
+  display: flex;
+  align-items: center;
+  background-color: rgb(216, 215, 215);
+  padding: 1em;
+  margin: 1em;
+  border-radius: 0.3em;
+  border:solid black 1px;
+  max-width: 10em;
+  min-height: 2em;
+  max-height: 5em;
+  display: -webkit-inline-box;
+
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+.title {
+text-align: center;
+}
