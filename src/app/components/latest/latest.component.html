@@ -1,19 +1,26 @@
-<h2>The last 5 articles</h2>
-<div class="main">
-<div class="article-container" *ngFor="let article of articles | slice:0:5;">
-    <h2 class="title"> {{article.title}}</h2>
-    <p class="content">{{article.content | slice:0:200}}...</p>
-    <div class="article-footer">
-      <div class="read-time">
-        <h3> Time to read:</h3>
-        <p>{{article.readTime}} minutes.</p>
+<div class="topic"><h2>The latest 5 articles</h2></div>
+
+<div class="main_container">
+  <div *ngFor="let article of articles | slice:0:5;">
+    <fieldset>
+      <legend><h3>{{article.title}}</h3></legend>
+
+      <p>{{article.content | slice:0:200}}...</p>
+
+      <div class="sub_box">
+        <div>
+          <h4> Time to read:</h4>
+          <p class="pp">{{article.readTime}} minutes.</p>
+        </div>
+
+        <div>
+          <h4>Published by: </h4>
+          <p class="pp">{{article.author}}</p>
+        </div>
       </div>
-      <div class="author-container">
-        <h4 class="author">Published by: </h4>
-        <p class="author">{{article.author}}</p>
-      </div>
-    </div>
+    </fieldset>
   </div>
 </div>
+
 
 
