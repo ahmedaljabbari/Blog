@@ -1,12 +1,19 @@
-.container {
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 45px;
   display: flex;
-  background-color: crimson;
+  background-color: 	#18392b;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
+  font-family: 'Kufam', cursive;
 }
 
 div ul {
   margin: 0;
+  margin-left: 5px;
   padding: 0;
   list-style: none;
 }
@@ -14,24 +21,56 @@ div ul li {
   display: inline-block;
   padding: 0.5em;
   color: white;
+  margin-right: 10px;
 }
 div ul li:hover {
-  background-color: rgb(77, 77, 77);
+  background-color:crimson;
+  color: white;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-.btn-login {
-  margin-right: 1em;
- height: 1.5em;
- align-self: center;
+
+.confirm_btn {
+  height: 35px;
+  align-self: center;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-weight: bold;
+
 }
+.confirm_btn:hover {
+  cursor: pointer;
+  background-color:crimson;
+  color: white;
+  font-weight: bold;
+}
+
+.logOut_btn{
+  height: 35px;
+  align-self: center;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.logOut_btn:hover {
+  cursor: pointer;
+  background-color:crimson;
+  color: white;
+  font-weight: bold;
+}
+
 .is-active {
-  background-color: rgb(77, 77, 77)
+  background-color:crimson;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
 }
-.header-text {
+.texto {
   display: inline;
   color: white;
 }
-.right-container {
+.right{
  align-self: center;
 }
