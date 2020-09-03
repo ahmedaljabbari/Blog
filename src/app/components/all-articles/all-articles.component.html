@@ -1,8 +1,10 @@
-<h2>All articles</h2>
-<h4>Titels only!</h4>
+<div class="main">
 
-<div class="main-container">
-    <div class="article-container" *ngFor="let titles of titles">
+  <fieldset>
+    <legend><h2>All articles</h2></legend>
+      <div class="article_box" *ngFor="let titles of titles">
         <h4 class="title">{{titles.title}}</h4>
-    </div>
+      </div>
+  </fieldset>
+
 </div>
