@@ -1,0 +1,12 @@
+.main {
+  height: 45px;
+  bottom: 0;
+  display: flex;
+  background-color: 	#008080;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kufam', cursive;
+  margin-top: 50px;
+
+}
