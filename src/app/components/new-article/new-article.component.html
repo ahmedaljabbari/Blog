@@ -1,46 +1,46 @@
-<div class="container">
-  <div class="wrapper">
-    <form #blogForm="ngForm">
-      <div class="form-group">
-        <label>Title</label>
-        <div>
+<fieldset class="main_container">
+  <legend><h2>Add new article</h2></legend>
+  <form #blogForm="ngForm">
+    <div>
+      <div class="title_part">
+        <label>Title:</label>
+        <input
+          type="text"
+          placeholder="Enter the title"
+          required
+          minlength="10"
+          maxlength="20"
+          [(ngModel)]="model.title"
+          name="title"
+          #title="ngModel"
+        />
+        <div
+          *ngIf="title.invalid && (title.dirty || title.touched)"
+          class="alert"
+        >
+          <div *ngIf="title.errors.required">Title is required!</div>
+
+          <div *ngIf="title.errors.minlength">minimum 10 characters!</div>
+        </div>
+      </div>
+
+      <label>Content:</label>
+      <div>
+        <textarea
+          rows="5"
+          required
+          [(ngModel)]="model.content"
+          name="content"
+          #content="ngModel"
+        ></textarea>
+      </div>
+
+      <div class="form_foot">
+        <div class="read_box">
+          <label>Time to read:</label>
           <input
             type="text"
-            placeholder="Ex Mannen bakom corona"
-            required
-            minlength="10"
-            maxlength="20"
-            [(ngModel)]="model.title"
-            name="title"
-            #title="ngModel"
-          />
-          <div
-            *ngIf="title.invalid && (title.dirty || title.touched)"
-            class="alert"
-          >
-            <div *ngIf="title.errors.required">You have to enter a title!</div>
-
-            <div *ngIf="title.errors.minlength">minimum 10 characters!</div>
-          </div>
-        </div>
-
-        <label>Content</label>
-        <div>
-          <textarea
-            cols="20"
-            rows="5"
-            required
-            [(ngModel)]="model.content"
-            name="content"
-            #content="ngModel"
-          ></textarea>
-        </div>
-
-        <label>Time to read in minutes</label>
-        <div>
-          <input
-            type="text"
-            placeholder="Ex (20)"
+            placeholder="In miutes"
             required
             [(ngModel)]="model.readtime"
             name="readtime"
@@ -48,20 +48,21 @@
           />
         </div>
 
-        <label>The author</label>
-        <div>
+        <div class="author_box">
+          <label>The author</label>
           <input
             type="text"
-            placeholder="Ex Pontus 'Z' Zetterberg"
+            placeholder="Full name"
             [(ngModel)]="model.author"
             name="author"
             #author="ngModel"
           />
         </div>
       </div>
-    </form>
-  </div>
-  <button [disabled]="blogForm.invalid" (click)="publishArticle()">
-    Publish
-  </button>
-</div>
+
+    </div>
+  </form>
+</fieldset>
+<div id="btn"><button [disabled]="blogForm.invalid" (click)="publishArticle()">
+  Publish
+</button></div>

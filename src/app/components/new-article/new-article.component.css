@@ -1,53 +1,62 @@
-*{
-  box-sizing: border-box;
+.main_container{
+  width: 400px;
+  min-width: 320px;
+  margin: 0 auto;
+  color: white;
+  font-family: 'Kufam', cursive;
+  padding: 10px;
+  position: relative;
 }
-body{
-  padding: 1rem;
+
+.title_part, textarea{
+  margin-bottom: 20px;
 }
-.container{
-  max-width: 25em;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1em;
 
-
+label{
+  margin-right: 10px;
 }
 
 textarea{
-  max-width:25em;
-  min-width: 25em;
+  width: 99%;
 }
-
-form{
-  border: 1px solid black;
-border-radius: 0.3em;
-padding: 0.3em;
-margin: 0.3em;
-  background-color:rgb(216,215,215);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-
-
-}
-form label{
-  display: block;
-}
-
-button{
-  background-color:lightslategray;
-
-}
-input{
-  background-color: lightgrey;
-  display: block;
-}
-
 
 .alert{
-  background-color: red;
+  color: red;
 }
 
 .ng-valid{
-  border: 2px solid green;
+  border: 3px solid #008080;
+}
+
+.read_box, .author_box{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.form_foot{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#btn{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#btn > button{
+  width: 200px;
+  font-family: 'Kufam', cursive;
+  background-color: teal;
+  color: white;
+  padding: 5px;
+  padding-top: 6px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+form{
+  padding: 5px;
 }
